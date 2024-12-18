@@ -1,0 +1,65 @@
+form{
+    
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 0.4em;
+        background-color: #ffffff70;
+        background: linear-gradient(
+          0deg,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 0, 0, 0.096) 100%
+        );
+        border-radius: 25px;
+        transition: .4s ease-in-out;
+        position: relative; /* Mantiene el formulario fijo */ 
+        top: 20vh; /* Ajusta según necesites para estar debajo del header */ 
+        left: 25vw; /* Mantén el formulario a la izquierda */ 
+        width: 50vw; /* Ajusta el ancho según sea necesario */
+        transition: all 3s;
+
+      
+}
+input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff70;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+}
+button{
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: rgba(255, 0, 0, 0.267);
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+    color: black;
+}
+label{
+    text-align: center;
+}
+.datos button{
+    position: relative;
+    top: 13vw;
+    left: 45vw;
+}
+table{
+    position: relative;
+    top: 15vw;
+    left: 40vw;
+}

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 1;
+    background-image: url(../fotos/fondoinicio.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: -3%;
+    left: 18%;
+    margin-top: 10vh;
+    width: 100%;
+    height: 100%;
+    background-image: url(../fotos/niñosinicio.png);
+    background-size: 48%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+
+
+.Header {
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del header */
+    align-items: center;
+    height: 2rem;
+    padding: 0 5%;
+    width: 100%;
+    position: relative; /* Asegura que el logo y los links se distribuyan correctamente */
+}
+
+.Header .left-links,
+.Header .right-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces dentro de sus contenedores */
+    flex: 1; /* Asegura que los contenedores ocupen el mismo espacio */
+}
+
+.Header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Hace que el logo esté centrado en el medio */
+}
+
+.Header .logo img {
+    height: 1.8rem; /* Ajusta el tamaño de la imagen */
+    width: auto;
+    transition: all 0.3s;
+}
+
+.Header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.Header .nav-links li {
+    padding: 0 15px;
+}
+
+.Header .nav-links a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+.Header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.Header .nav-links li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    position: fixed; /* Mantiene el formulario fijo */ 
+    top: 15vh; /* Ajusta según necesites para estar debajo del header */ 
+    left: 3vw; /* Mantén el formulario a la izquierda */ 
+    width: 40vw; /* Ajusta el ancho según sea necesario */
+    transition: all 3s;
+  }
+  
+
+  #heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+  }
+  
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff70;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+  }
+  
+  .input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: rgb(0, 0, 0);
+  }
+  
+  .input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #000000;
+  }
+  
+  .form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+    
+  }
+  
+  .button1 {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: rgba(255, 0, 0, 0.267);
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+    color: black;
+  }
+  
+  .button1:hover {
+    background-color: rgb(255, 197, 197);
+    color: rgb(0, 0, 0);
+  }
+  
+  .button2 {
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: rgba(255, 0, 0, 0.267);
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+    color: black;
+  }
+  
+  .button2:hover {
+    background-color: rgb(255, 197, 197);
+    color: rgb(0, 0, 0);
+  }
+  
+  .button3 {
+    margin-bottom: 3em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: rgba(255, 0, 0, 0.267);
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+    color: black;
+  }
+  
+  .button3:hover {
+    background-color: rgb(255, 197, 197);
+    color: rgb(0, 0, 0);
+  }
+
+h6 a{
+  text-decoration: none;
+  color: black;
+  font-family: "Poetsen One", sans-serif;
+  position: relative;
+  top: 0;
+  transition: 1s all;
+}
+h6 a:hover{
+  background-color: rgb(255, 167, 167);
+  padding: 0.3vw;
+  transition: 1s all;
+  border-radius: 18px;
+
+}

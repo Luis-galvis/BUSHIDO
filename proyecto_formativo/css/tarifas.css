@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 1;
+    background-image: url(../fotos/ampli.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.Header {
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del header */
+    align-items: center;
+    height: 2rem;
+    padding: 0 5%;
+    width: 100%;
+    position: relative; /* Asegura que el logo y los links se distribuyan correctamente */
+    
+}
+
+.Header .left-links,
+.Header .right-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces dentro de sus contenedores */
+    flex: 1; /* Asegura que los contenedores ocupen el mismo espacio */
+    
+}
+
+.Header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Hace que el logo esté centrado en el medio */
+}
+
+.Header .logo img {
+    height: 1.8rem; /* Ajusta el tamaño de la imagen */
+    width: auto;
+    transition: all 0.3s;
+}
+
+.Header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.Header .nav-links li {
+    padding: 0 15px;
+}
+
+.Header .nav-links a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+.Header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.Header .nav-links li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+.swiper-container {
+    display: flex; 
+    justify-content: center; /* Centra horizontalmente el contenido dentro del contenedor */ 
+    align-items: center; /* Centra verticalmente el contenido dentro del contenedor */
+    margin-top: 5rem; height: 80vh; /* Asegura que el contenedor tenga suficiente altura */ 
+}
+
+.swiper-slide {
+    display: flex; 
+    justify-content: center; /* Centra las tarjetas horizontalmente */ 
+    align-items: center; /* Centra las tarjetas verticalmente */ 
+    height: 100%; /* Asegura que el contenedor de las tarjetas ocupe toda la altura disponible */ 
+}
+
+.pricing-card { 
+    position: relative; /* Asegura que el contenido esté posicionado en relación al contenedor */ 
+    border: 2px solid #000000; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 10px; 
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+    padding: 2rem; 
+    text-align: center; 
+    width: 23vw;
+    margin: 0 1rem; /* Añade un margen horizontal para evitar que las tarjetas estén pegadas */ 
+    flex: 0 0 auto;
+    margin-left: 5vw; 
+} 
+.pricing-card::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-image: url(../fotos/pob5-removebg-preview.png); 
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */ 
+    background-position: center; /* Centra la imagen */ 
+    background-repeat: no-repeat; filter: blur(1px); /* Aplica el desenfoque */ 
+    border-radius: 10px; /* Mantiene el borde redondeado */ 
+    z-index: 1; /* Asegura que el pseudo-elemento esté detrás del contenido */ 
+} 
+.pricing-card > * { 
+    position: relative; z-index: 2; /* Asegura que el contenido esté encima del pseudo-elemento */ 
+}
+.pricing-card h2 {
+    margin-bottom: 1rem;
+    color: rgb(0, 0, 0);
+    filter: blur(0px);
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    color: #000000;
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    color: rgb(0, 0, 0);
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+}
+
+.pricing-card .buy-now {
+    background-color: #fcc8c879;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .buy-now:hover {
+    background-color: #ffc5c5;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #000 !important; /* Forza el color negro */
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    color: #ffffff !important; /* Color de las flechas al pasar el mouse */
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo Usuarios</title>
+    <link rel="stylesheet" href="../css_admin/usuario_Ad.css">
+    <link rel="stylesheet" href="../css_admin/mod_usu.css">
+    <link rel="shortcut icon"
+        href="/proyecto formativo/fotos/bushido_dojo_imagen-removebg-preview-removebg-preview.png">
+</head>
+
+<body>
+    <header class="Header">
+        <div class="left-links">
+            <ul class="nav-links">
+                <li><a href="main_ad.html"></a></li>
+                <li><a href="">matricula</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="../html_admin/main_ad.html"><img src="../fotos/nuevobushido.png" alt="Logo de la marca"></a>
+        </div>
+        <div class="right-links">
+            <ul class="nav-links">
+                <li><a href="../html_usuario/index.html">salir</a></li>
+            </ul>
+        </div>
+    </header> 
+
+    <div class="container">
+        <div class="left-side">
+            <div class="title">Jimmy Olivar</div>
+            <ul class="info-list">
+                <li>Rango:</li>
+                <li>Examen:</li>
+                <li>Edad:</li>
+                <li>Tipo de sangre:</li>
+                <li>Peso:</li>
+                <li>Dirección:</li>
+                <li>Teléfono:</li>
+                <li>Teléfono acudiente:</li>
+            </ul>
+        </div>
+
+        <div class="right-side">
+            <div class="assistance-title">
+                Asistencia
+                <div class="month-selector">
+                    <select id="month-select">
+                        <option value="enero">Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="septiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                    <button id="six-months-btn">Últimos 6 Meses</button>
+                </div>
+            </div>
+
+            <div id="table-container">
+                <!-- Aquí se mostrará la tabla de asistencia filtrada por mes y cálculos -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/usuario.js"></script>
+</body>
+
+</html>

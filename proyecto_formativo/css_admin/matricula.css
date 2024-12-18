@@ -1,0 +1,160 @@
+.title{
+    font-size: 2em; /* Agranda el texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 4px; /* Añade espacio entre las letras */
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background: linear-gradient(to right, #131313, #ff0303);
+    -webkit-background-clip: text;
+    color: transparent ; /* Hace el texto transparente para ver el degradado */
+    margin-bottom: 1em;
+}
+.title:hover{
+    text-decoration: underline;
+}
+.p1{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+.message {
+    font-size: 16px;
+    color: #cd0808;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para los campos de entrada */
+.input {
+   
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(201, 22, 22);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fdf6f7;
+    height: 35px;
+    width: 300px;
+    font-size: 12px; /* Tamaño de la fuente en píxeles */
+}
+
+/* Estilos para los elementos label */
+label {
+    display: block;
+    margin-bottom: 1px;
+    position: relative;
+    right: -50px;
+  
+}
+.mformulario1, .mformulario2, .mformularios {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );    width: 400px;
+    border-radius: 6px;
+    margin: 1rem auto; /* Centra horizontalmente y añade margen superior e inferior */
+}
+
+.titulo2{
+    width: 6rem;
+    margin: 1rem auto; /* Centra horizontalmente y añade margen superior e inferior */
+    border-radius: 6px;
+    text-decoration: none;
+    color:  black;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.titulo2:hover{
+    background-color: rgb(202, 202, 154);
+    color: white; 
+}
+
+/* Estilos para los span dentro de los labels */
+label span {
+    display: block;
+    font-size: 14px;
+    color: #272323;
+    margin-top: 5px;
+  
+}
+.form-group{
+    display: flex;
+    margin-left: 5rem;
+    border-radius: 6px;
+}
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    
+}
+.form-group button {
+    padding: 10px 15px;
+    color:black;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 6px;
+    margin-left: 3rem;
+}
+.form-group button:hover {
+    background-color: #aec7e2;
+}
+.links {
+    text-decoration: none;
+    color: black;
+    display: block; /* Cambia de flex a block */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    transition: all 0.5s;
+    width: 400px; /* Establece el mismo ancho que el formulario */
+    padding: 10px 15px; /* Ajusta el padding si es necesario */
+    text-align: center; /* Centra el texto dentro del botón */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+.links:hover {
+    background-color: rgb(202, 202, 154);
+    color: white;
+}
+
+
+.button1{
+    padding: 10px 15px;
+    color:black;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+margin-left: 8rem;
+border-radius: 6px;
+
+}
+.button1:hover{
+    background-color: #aec7e2;
+}    
+#responseMessage{
+text-align: center;
+
+}
+
+.button2{
+    padding: 10px 15px;
+    color:black;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+margin-left: 5rem;
+border-radius: 6px;
+
+}
+.button2:hover{
+    background-color: #aec7e2;
+}    

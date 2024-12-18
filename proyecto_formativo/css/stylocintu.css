@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.Header {
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del header */
+    align-items: center;
+    height: 2rem;
+    padding: 0 5%;
+    width: 100%;
+    position: relative; /* Asegura que el logo y los links se distribuyan correctamente */
+    z-index: 1000;
+}
+
+.Header .left-links,
+.Header .right-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces dentro de sus contenedores */
+    flex: 1; /* Asegura que los contenedores ocupen el mismo espacio */
+}
+
+.Header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Hace que el logo esté centrado en el medio */
+}
+
+.Header .logo img {
+    height: 1.8rem; /* Ajusta el tamaño de la imagen */
+    width: auto;
+    transition: all 0.3s;
+}
+
+.Header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.Header .nav-links li {
+    padding: 0 15px;
+}
+
+.Header .nav-links a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+.Header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.Header .nav-links li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+
+
+/* carousel */
+.carousel{
+    height: 101.3vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:blur(3px);
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+    font-family: 'Poppins', sans-serif; 
+
+}
+.carousel .list .item .topic{
+    color: #ff0d0d;
+    margin-bottom: 3vw;
+
+}
+.carousel .list .item .des {
+    color: #000; /* Cambia el color de la descripción a negro */
+    font-family: 'Poppins', sans-serif; 
+    font-size: 25px;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #df1111;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: #c60d0d;
+    border: 1px solid #d11111;
+    color: #c60d0d;
+}
+/* thumbnail */
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 80%; /* Cambia de 50% a 80% para mover hacia la izquierda */
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 22%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+

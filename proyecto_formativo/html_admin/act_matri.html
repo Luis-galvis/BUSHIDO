@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_admin/main_Ad.css">
+    <link rel="stylesheet" href="../css_admin/act_matri.css">
+    <title>Actualizar Matrícula</title>
+</head>
+<body>
+    <header class="Header">
+        <div class="left-links">
+            <ul class="nav-links">
+                <li><a href="main_ad.html">Inicio</a></li>
+                <li><a href="tarifas_ac.html">Grupos y accesorios</a></li>
+                <li><a href="rango.php">Rango</a></li>
+                <li><a href="matricula.html">Matrícula</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="main_ad.html"><img src="../fotos/nuevobushido.png" alt="Logo"></a>
+        </div>
+        <div class="right-links">
+            <ul class="nav-links">
+                <li><a href="act_matri.html">Actualizar Matrícula</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="comentariosad.html">Información</a></li>
+                <li><a href="asistencia.html">Asistencia</a></li>
+                <li><a href="../html_usuario/index.html">Salir</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <main>
+        <form id="actualizarMatriculaForm">
+            <label for="grupo">Selecciona un grupo:</label>
+            <select id="grupo" name="grupo">
+                <option value="">Seleccionar grupo</option>
+                <!-- Los grupos se cargarán aquí dinámicamente -->
+            </select>
+            <button type="button" id="filtrarBtn">Filtrar</button> <!-- Botón de filtro -->
+        
+            <table id="usuariosTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Seleccionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los usuarios se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        
+        </form>
+    </main>
+    
+    <script src="../js/cargar_grupos.js"></script>
+</body>
+</html>
+

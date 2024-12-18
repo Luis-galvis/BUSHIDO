@@ -1,0 +1,100 @@
+label {
+   position: relative;
+    left: 40vw;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+select {
+    width: 30%;
+    padding: 8px;
+    top: 3vw;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff70;
+    position: relative;
+    left: 16vw;
+}
+#filtrarBtn{
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.267);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 10%;
+    position: relative;
+    top: 3vw;
+    left: 18vw;
+    font-weight: bold;
+    text-align: center;
+}
+#filtrarBtn:hover{
+    color: black;
+    background-color: rgb(245, 179, 179);
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que el contenedor ocupe todo el alto de la página */
+}
+
+table {
+    position: relative;
+    top: 6vw;
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 45%;
+    margin: auto; /* Centra la tabla dentro del contenedor */
+}
+
+td {
+    text-align: center; /* Centra el contenido dentro de la celda */
+    vertical-align: middle; /* Centra verticalmente el contenido de la celda */
+}
+
+button {
+    background-color: transparent;
+    border: none; /* Oculta los bordes */
+    padding: 10px 20px; /* Ajusta el espacio interno para mejorar el área de clic */
+    cursor: pointer; /* Cambia el cursor para indicar que es clicable */
+    transition: background-color 0.3s ease; /* Añade una transición suave para el efecto de clic */
+}
+
+button:active {
+    background-color: rgba(0, 0, 0, 0.1); /* Añade una ligera sombra al hacer clic */
+}
+
+#filtrar_estu{
+    background-color: #ffffff70;
+    display: flex;
+    margin: 10px;
+    height: 40px;
+    width: 250px;
+    text-align: center;
+}
+h1{
+    font-size: 3em; /* Agranda el texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 4px; /* Añade espacio entre las letras */
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background: linear-gradient(to right, #131313, #ff0303);
+    -webkit-background-clip: text;
+    color: transparent ; /* Hace el texto transparente para ver el degradado */
+    margin-bottom: 1em;
+}
+h1:hover{
+    text-decoration: underline;
+}

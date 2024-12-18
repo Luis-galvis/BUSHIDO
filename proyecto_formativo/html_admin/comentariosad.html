@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_admin/main_Ad.css">
+    <link rel="stylesheet" href="../css_admin/comentariosad.css">
+    <link rel="shortcut icon" href="../fotos/bushido_dojo_imagen-removebg-preview-removebg-preview.png">
+    <title>COMENTARIOS</title>
+</head>
+<body>
+    <header class="Header">
+        <div class="left-links">
+            <ul class="nav-links">
+                <li><a href="main_ad.html">Inicio</a></li>
+                <li><a href="tarifas_ac.html">Grupos y accesorios</a></li>
+                <li><a href="rango.php">Rango</a></li>
+                <li><a href="matricula.html">Matrícula</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="../html_admin/main_ad.html"><img src="../fotos/nuevobushido.png" alt="Logo de la marca"></a>
+        </div>
+        <div class="right-links">
+            <ul class="nav-links">
+                <li><a href="act_matri.html">Actualizar matrícula</a></li>
+                <li><a href="pagos.html">Pagos</a></li>
+                <li><a href="comentariosad.html">Información</a></li>
+                <li><a href="asistencia.html">Asistencia</a></li>
+                <li><a href="../html_usuario/index.html">Salir</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <form id="comentForm" action="../php/guardarinfo.php" enctype="multipart/form-data" method="post">
+        <label for="texto">Contenido de la Información:</label>
+        <input type="text" id="texto" name="texto" required>
+    
+        <label for="imagen">Subir Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+    
+        <label for="video">Subir Video:</label>
+        <input type="file" id="video" name="video" accept="video/*">
+    
+        <label for="fijar">Fijar esta información:</label>
+        <input type="checkbox" id="fijar" name="fijar" value="1">
+    
+        <button type="submit">Guardar</button>
+        <div id="responseMessage"></div>
+    </form>
+    <div class="datos">
+    <button  onclick="mostrarDatos()">Ver informacion</button>
+    </div>
+    <!-- Contenedor para mostrar los datos existentes -->
+    <div id="datosExistentes" style="margin-top: 20px">
+        <!-- Aquí se cargarán los datos de la base de datos -->
+    </div>
+    
+    
+    <script>
+function mostrarDatos() {
+    fetch('../php/obtener_datos.php')
+        .then(response => response.json())
+        .then(data => {
+            const contenedor = document.getElementById('datosExistentes');
+            contenedor.innerHTML = ''; // Limpiar el contenedor
+
+            if (data.length > 0) {
+                let table = '<table border="1"><tr><th>Texto</th><th>Media</th><th>Acciones</th></tr>';
+                data.forEach(item => {
+                    const media = item.mime_type.startsWith('image/')
+                        ? `<img src="../php/mostrar_media.php?id=${item.id_comentarios}&nocache=${Date.now()}" alt="Imagen" style="width: 100px;">`
+                        : item.mime_type.startsWith('video/')
+                        ? `<video src="../php/mostrar_media.php?id=${item.id_comentarios}&nocache=${Date.now()}" style="width: 100px;" controls></video>`
+                        : 'Sin multimedia';
+
+                    table += `
+                        <tr>
+                            <td>${item.texto}</td>
+                            <td>${media}</td>
+                            <td><button onclick="eliminarDato(${item.id_comentarios})">Eliminar</button></td>
+                        </tr>
+                    `;
+                });
+                table += '</table>';
+                contenedor.innerHTML = table;
+            } else {
+                contenedor.innerHTML = '<p>No hay datos disponibles.</p>';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+
+function eliminarDato(id) {
+    if (confirm('¿Estás seguro de que deseas eliminar este registro?')) {
+        fetch(`../php/eliminar_dato.php?id=${id}`, { method: 'GET' })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                mostrarDatos(); // Recargar los datos
+            })
+            .catch(error => console.error('Error:', error));
+    }
+}
+
+        document.getElementById('comentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            var formData = new FormData(this);
+        
+            fetch('../php/guardarinfo.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('responseMessage').innerHTML = data;
+                document.getElementById('comentForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('responseMessage').innerHTML = 'Hubo un error al enviar el formulario.';
+            });
+        });
+    </script>
+</body>
+</html>

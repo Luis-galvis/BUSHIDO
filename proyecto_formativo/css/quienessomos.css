@@ -1,0 +1,488 @@
+/* ¿Quiénes somos? */
+#quienes-somos {
+    padding: 2rem;
+    color: #000;
+    overflow: hidden; /* Evita el desplazamiento vertical */ 
+    max-height: 100vh; /* Asegura que la altura máxima sea la del viewport */
+}
+
+#quienes-somos h1 {
+    text-align: center;
+    color: #6c0000;
+    font-family: 'Poppins', sans-serif; 
+
+    font-size: 2.8rem;
+}
+
+#quienes-somos .content {
+    display: flex; 
+    gap: 1rem; 
+    margin-top: 1rem;
+}
+#quienes-somos p {
+font-family: 'Poppins', sans-serif; 
+text-align: center;
+background-color: #ffe9e92f;
+border-radius: 20px;
+max-width: 60vw;
+position: relative;
+left: 17vw;
+top: 2vw;
+font-size: 2vw;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Ajustar el slider para que ocupe más espacio */
+.slider {
+    position: relative;
+    max-width: 30%; /* Establecer un ancho completo para que el slider ocupe todo el espacio */
+    overflow: hidden;
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    border-inline: 2px solid transparent;
+    border-radius: 10px;
+    top: 1vw;
+    left: 5vw;
+}
+
+/* Contenedor de slides debe ser suficientemente ancho */
+.slide-container {
+    max-height: 20vw;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;  /* Asegura que el contenedor ocupe el ancho completo */
+}
+
+/* Cada slide debe tener el 100% de ancho */
+.slide {
+    flex-shrink: 0; /* Impide que los slides se reduzcan de tamaño */
+    width: 100%; /* Asegura que cada slide ocupe el 100% del contenedor */
+    box-sizing: border-box;
+    padding: 7vw;
+    text-align: center;
+}
+
+/* Estilos de las imágenes */
+.slide img { 
+    max-width: 100%; /* La imagen no excederá el 100% del ancho del contenedor */
+    height: 10vw;
+    display: block;
+    margin: 5px auto;
+    object-fit: cover;
+    max-height: 15vw;
+    border-radius: 18px;
+    margin-top: -2.2vw;
+}
+.slide video{
+    max-height: 10vw;
+    display: block;
+    margin: 5px auto;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: -2.2vw;
+}
+.slide p{
+    position: relative;
+    top: -4vw;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    background: transparent;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    width: 15vw;
+    height: 20vw;
+    perspective: 1000px;
+    position: fixed; /* Mantén las tarjetas en una posición fija */
+    top: 25vw;
+    left: 80vw;
+    overflow: hidden; /* Asegura que el contenido extra se oculte */
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+
+.card-front {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border-radius: 10px; /* Mantiene el borde redondeado de la imagen */
+}
+
+.card-back {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+.card2 {
+    width: 15vw;
+    height: 20vw;
+    perspective: 1000px;
+    position: fixed; /* Mantén las tarjetas en una posición fija */
+    top: 25vw;
+    left: 64vw;
+    overflow: hidden; /* Asegura que el contenido extra se oculte */
+}
+
+.card-inner2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card2:hover .card-inner2 {
+    transform: rotateY(180deg);
+}
+
+.card-front2,
+.card-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+
+.card-front2 {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+.card-front2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border-radius: 10px; /* Mantiene el borde redondeado de la imagen */
+}
+
+.card-back2 {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+.card3 {
+    width: 15vw;
+    height: 20vw;
+    perspective: 1000px;
+    position: fixed; /* Mantén las tarjetas en una posición fija */    
+    top: 25vw;
+    overflow: hidden; /* Asegura que el contenido extra se oculte */
+    left: 48vw;
+}
+
+.card-inner3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card3:hover .card-inner3 {
+    transform: rotateY(180deg);
+}
+
+.card-front3,
+.card-back3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+
+.card-front3 {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+.card-front3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+    border-radius: 10px; /* Mantiene el borde redondeado de la imagen */
+}
+
+.card-back3 {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    border-radius: 10px; /* Mantén el borde redondeado en ambos lados */
+}
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.9); 
+} 
+.modal-content { 
+    margin: auto; 
+    display: block; 
+    width: 80%; 
+    max-width: 700px; 
+} 
+#caption { 
+ 
+    display: none; 
+
+} 
+.modal-content, #caption { 
+    animation-name: zoom; 
+    animation-duration: 0.6s; 
+} 
+@keyframes zoom { 
+    from {transform: scale(0)} to {transform: scale(1)} 
+} 
+.close { 
+    position: absolute; 
+    top: 15px; 
+    right: 35px; 
+    color: #f1f1f1; 
+    font-size: 40px; 
+    font-weight: bold; 
+    transition: 0.3s; 
+} 
+.close:hover, .close:focus { 
+    color: #bbb; 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+@media screen and (max-width: 820px) and (max-height: 1180px) {    /* ipad air */
+    #quienes-somos h1 {
+        text-align: center;
+        color: #6c0000;
+        font-family: 'Poppins', sans-serif; 
+    
+        font-size: 5rem;
+    }
+ 
+    
+}
+@media screen and (max-width: 768px) and (max-height: 1024px)/* ipad mini */ {
+    #quienes-somos h1 {
+        text-align: center;
+        color: #6c0000;
+        font-family: 'Poppins', sans-serif; 
+    
+        font-size: 8rem;
+    }
+
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) /* iPhone XR */ {
+    /* Estilos para los títulos dentro del header */
+    .Header h1 {
+        text-align: center;
+        color: #6c0000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+    }
+
+    /* Ocultar los enlaces de navegación por defecto */
+    .Header .left-links,
+    .Header .right-links {
+        display: none;
+    }
+
+    /* Mostrar el ícono hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Cuando el checkbox está marcado, mostrar los enlaces */
+    #checkbox:checked + .toggle + .left-links,
+    #checkbox:checked + .toggle + .right-links {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 5%;
+        background-color: black;
+        width: 90%;
+        padding: 20px;
+        border-radius: 5px;
+        flex-direction: column;
+    }
+
+    /* Asegurar que los enlaces se vean bien cuando están activos */
+    .Header .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+        color: white; /* Ajusta el color del texto para mayor contraste */
+    }
+
+    /* Estilos del checkbox para ocultarlo */
+    #checkbox {
+        display: none;
+    }
+
+    /* Estilo del toggle (el ícono hamburguesa) */
+    .toggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition-duration: .3s;
+    }
+
+    /* Estilos para las barras del menú hamburguesa */
+    .bars {
+        width: 100%;
+        height: 4px;
+        background-color: rgb(253, 255, 243);
+        border-radius: 5px;
+        transition-duration: .3s;
+    }
+
+    /* Cuando el checkbox está marcado, animamos las barras */
+    #checkbox:checked + .toggle #bar2 {
+        transform: translateY(14px) rotate(60deg);
+        margin-left: 0;
+        transform-origin: right;
+        transition-duration: .3s;
+        z-index: 2;
+    }
+
+    #checkbox:checked + .toggle #bar1 {
+        transform: translateY(28px) rotate(-60deg);
+        transition-duration: .3s;
+        transform-origin: left;
+        z-index: 1;
+    }
+
+    #checkbox:checked + .toggle {
+        transform: rotate(-90deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+

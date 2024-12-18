@@ -1,0 +1,88 @@
+/* Grid de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Hacemos que las columnas se adapten */
+    gap: 20px;  /* Espacio entre las imágenes y videos */
+    padding: 20px;
+    grid-auto-rows: 250px; /* Altura automática de las filas, puedes ajustarlo */
+}
+
+/* Cada tarjeta de imagen o video */
+.product-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    overflow: hidden; /* Para no mostrar partes fuera del borde de la imagen o video */
+    background-color: transparent; /* Fondo para cada tarjeta */
+}
+
+/* Efecto hover para las tarjetas */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo de las imágenes */
+.product-card img {
+    width: 100%;  /* Hacer que la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Hacer que la imagen ocupe toda la altura disponible */
+    object-fit: cover; /* Hace que la imagen cubra el área, recortándola si es necesario */
+}
+
+/* Estilo de los videos */
+.product-card video {
+    width: 100%;  /* Hacer que el video ocupe todo el ancho disponible */
+    height: 100%; /* Hacer que el video ocupe toda la altura disponible */
+    object-fit: cover; /* Hace que el video cubra el área, recortándolo si es necesario */
+}
+
+/* Variar el tamaño de algunas imágenes y videos */
+.product-card:nth-child(odd) {
+    grid-row-end: span 2;  /* Hace que algunos elementos se extiendan a dos filas (más grandes) */
+}
+
+.product-card:nth-child(even) {
+    grid-row-end: span 1;  /* Deja algunos elementos con una sola fila (más pequeños) */
+}
+
+/* Asegurarse que los elementos pequeños se alineen bien en una columna */
+.product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Hacemos que las columnas se adapten */
+    gap: 20px;
+    padding: 20px;
+    grid-auto-rows: 250px; /* Altura de las filas */
+    grid-template-rows: auto; /* Las filas se ajustan a los contenidos */
+}
+
+.product-card:nth-child(even):not(:nth-child(odd)) {
+    /* Establece que los elementos pequeños se ubiquen encima de otros */
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+.image1{
+    position: relative;
+    width: 100%;
+    height: 10vw;
+    background-color: #ffc1c170;
+    border: solid transparent 1px;
+    border-radius: 10px;
+}
+.image1 img{
+    width: 100%;  /* Hacer que la imagen ocupe todo el ancho disponible */
+    height: 100%; /* Hacer que la imagen ocupe toda la altura disponible */
+    object-fit:cover; /* Hace que la imagen cubra el área, recortándola si es necesario */
+    border: solid transparent 1px;
+    border-radius: 10px;
+}
+
+.image1 h1{
+    position: relative;
+    top: 2.5vw;
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Poppins', sans-serif; 
+    color: #6c0000;
+        
+}
+
+

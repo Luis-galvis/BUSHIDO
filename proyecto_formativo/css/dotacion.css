@@ -1,0 +1,115 @@
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: #ffffff70;
+    text-align: center;
+}
+
+
+/* Grid de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 150px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+
+.product-card img {
+    display: block;
+    margin: auto;
+    width: 150px; 
+    height: auto;
+}
+
+.no-results {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+    font-size: 18px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 25px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+}
+h1{
+    font-size: 3em; /* Agranda el texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 4px; /* Añade espacio entre las letras */
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    background: linear-gradient(to right, #131313, #ff0303);
+    -webkit-background-clip: text;
+    color: transparent ; /* Hace el texto transparente para ver el degradado */
+}
+h1:hover{
+    text-decoration: underline;
+}

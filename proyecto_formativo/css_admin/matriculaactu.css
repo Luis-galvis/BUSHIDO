@@ -1,0 +1,60 @@
+/* Estilos para los campos de entrada */
+input {
+   
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #c91616;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fdf6f7;
+    height: 35px;
+    width: 300px;
+    font-size: 12px; /* Tamaño de la fuente en píxeles */
+    position: relative;
+    left: 3.5vw;
+}
+
+/* Estilos para los elementos label */
+label {
+    display: block;
+    font-size: 14px;
+    color: #272323;
+    margin-top: 5px;
+    text-align: center;
+  
+}
+.mformulario1{
+    background-color: #ffffff70;
+    background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255) 0%,
+      rgba(255, 0, 0, 0.096) 100%
+    );    width: 400px;
+    border-radius: 6px;
+    margin: 1rem auto; /* Centra horizontalmente y añade margen superior e inferior */
+}
+
+
+
+h3{
+    text-align: center;
+}
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: rgb(255, 128, 128);
+    color:black;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 1rem;
+margin-left: 0rem;
+border-radius: 6px;
+
+}
+input[type="submit"]:hover{
+    background-color: rgb(165, 190, 216);
+
+}

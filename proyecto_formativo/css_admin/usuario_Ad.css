@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poetsen One", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 1;
+    background-image: url(../fotos/ampli.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.Header {
+    top: 0; /* Asegura que esté en la parte superior de la página */
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del header */
+    align-items: center;
+    height: 2rem;
+    padding: 0 30%;
+    width: 100%;
+    position: relative; /* Asegura que el logo y los links se distribuyan correctamente */
+}
+
+.Header .left-links,
+.Header .right-links {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los enlaces dentro de sus contenedores */
+    flex: 1; /* Asegura que los contenedores ocupen el mismo espacio */
+}
+
+.Header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Hace que el logo esté centrado en el medio */
+}
+
+.Header .logo img {
+    height: 2.5rem; /* Ajusta el tamaño de la imagen */
+    width: auto;
+    transition: all 0.3s;
+}
+
+.Header .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.Header .nav-links li {
+    padding: 0 15px;
+}
+
+.Header .nav-links a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+.Header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.Header .nav-links li a:hover {
+    color: red;
+    text-decoration: underline;
+}
